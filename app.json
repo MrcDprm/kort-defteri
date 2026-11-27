@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "Kort Defteri",
+    "slug": "kort-defteri",
+    "version": "1.0.0",
+    "scheme": "kortdefteri",
+    "platforms": ["ios"],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.miracdeprem.kortdefteri",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleDevelopmentRegion": "tr",
+        "CFBundleLocalizations": ["tr"],
+        "NSCameraUsageDescription": "Sporcu ve profil fotoğrafı çekmek için kamerayı kullanır.",
+        "NSPhotoLibraryUsageDescription": "Sporcu ve profil fotoğrafı seçmek için fotoğraflarına erişir."
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F4F5F1",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160
+        }
+      ],
+      "expo-sqlite",
+      "expo-sharing",
+      "expo-secure-store",
+      "expo-font",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-notifications",
+        {
+          "color": "#2E5E8E"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Sporcu ve profil fotoğrafı seçmek için fotoğraflarına erişir.",
+          "cameraPermission": "Sporcu ve profil fotoğrafı çekmek için kamerayı kullanır.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
