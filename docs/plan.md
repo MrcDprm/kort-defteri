@@ -49,12 +49,13 @@ Aylık maliyet: 0 TL. Supabase'de 2 ücretsiz proje hakkının dolu olup olmadı
 - Fotoğraf seçilince 800 piksel genişliğe sıkıştırılıp kaydedilir.
 
 ### Ödemeler
-- İki ödeme türü: aylık aidat, sporcuya göre tutar ve ödeme günü; paket ders, örneğin 8 derslik paket.
-- Ay ay her sporcu: ödeme tarihi, tutar, ödedi mi. Ödediyse yeşil, ödemediyse kırmızı, günü geçtiyse gecikmiş.
-- Tek dokunuşla ödendi işareti, nakit ya da havale.
-- Pakette kalan ders sayısı yoklamadan otomatik düşer; paket bitince ödeme bekleyene geçer.
+- Uygulama ödeme almaz, yalnızca hocanın kendi kaydıdır. Sabit bir ödeme modeli yoktur: aidat, paket ya da tek ders ayrımı yapılmaz, hoca her ödemeyi elle girer. Ayrıntılar netleştikçe revize edilir.
+- Bir ödeme kaydı: sporcu, ödeme tarihi, tutar, ödedi mi, isteğe bağlı not.
+- Ödediyse yeşil, ödemediyse kırmızı; tarihi geçmiş ve ödenmemişse gecikmiş olarak işaretlenir.
+- Tek dokunuşla ödendi işareti.
+- Sporcu profilinde o sporcunun ödeme geçmişi.
 - Veliye hazır yazılmış WhatsApp hatırlatması, wa.me linkiyle.
-- Aylık toplam gelir ve bekleyen tutar.
+- Ay toplamı: alınan ve bekleyen tutar.
 
 ### Takvim ve yoklama
 - Haftalık tekrar eden dersler: gün, saat, kort, grup ya da özel ders, sporcular.
@@ -101,13 +102,12 @@ Aylık maliyet: 0 TL. Supabase'de 2 ücretsiz proje hakkının dolu olup olmadı
 ## Veri modeli
 
 - `coach_profile`: tek satır, hocanın profil bilgileri.
-- `athletes`: sporcu bilgileri, ödeme türü, aylık tutar ve ödeme günü.
+- `athletes`: sporcu bilgileri.
 - `measurements`: sporcu, tarih, boy, kilo.
 - `lesson_templates`: haftalık tekrar eden ders.
 - `lessons`: tarihli ders, durumu planlı, yapıldı ya da iptal; telafi ise bağlı olduğu ders.
 - `lesson_athletes` ve `attendance`: derse kayıtlı sporcular ve yoklama.
-- `payments`: sporcu, dönem ya da paket, vade, tutar, ödeme tarihi, yöntem.
-- `packages`: sporcu, ders sayısı, alış tarihi, tutar; kalan ders yoklamadan hesaplanır.
+- `payments`: sporcu, ödeme tarihi, tutar, ödendi mi, ödendiği an, not.
 - `metrics`, `evaluations`, `evaluation_scores`: performans.
 - `tournaments`, `tournament_entries`: turnuvalar ve sonuçlar.
 - `settings`: anahtar ve değer.
@@ -136,7 +136,7 @@ Her parça kendi branch'inde, testleri geçer durumda biter.
 1. Tasarım önerisi: palet, yazı tipleri, sahadan gelen imza çizim, ana sayfa ve sporcu ekranı taslağı. Onaydan sonra koda geçilir.
 2. İskelet: Expo SDK 58, expo-router, tema, alt sekmeler, SQLite şema ve göçler, Vitest.
 3. Sporcular ve sporcu profili.
-4. Ödemeler ve paket ders.
+4. Ödemeler.
 5. Takvim ve yoklama.
 6. Ana sayfa.
 7. Performans ve gelişim karnesi.
