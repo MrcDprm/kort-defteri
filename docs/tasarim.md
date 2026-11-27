@@ -33,15 +33,15 @@
 
 ## Yazı
 
-Tek aile: **Archivo**, Omnibus-Type, SIL Open Font License, Latin Extended ile Türkçe karakterler tam. Genişlik ekseni 62-125 arası. Uygulamaya statik TTF dosyaları olarak gömülür.
+Tek aile: **Archivo**, Omnibus-Type, SIL Open Font License, Latin Extended ile Türkçe karakterler tam. React Native değişken yazı tipinin genişlik eksenini kullanamadığı için dar kesim olarak aynı dökümhanenin Archivo Narrow ailesi kullanılır. İkisi de @expo-google-fonts paketlerinden statik TTF olarak gömülür, yalnızca kullanılan kesimler.
 
 | Rol | Kesim |
 |---|---|
-| Ekran başlığı | Archivo SemiExpanded, ExtraBold |
-| Sayılar, saatler | Archivo Condensed, ExtraBold, eşit genişlikli rakamlar |
-| Gövde ve arayüz | Archivo, Regular ve SemiBold |
+| Ekran başlığı | Archivo ExtraBold |
+| Sayılar, saatler | Archivo Narrow Bold |
+| Gövde ve arayüz | Archivo Regular, Medium, SemiBold, Bold |
 
-Saatler ve sayılar dar kesimde maç tabelası gibi okunur, başlıklar geniş kesimde. İkinci bir aileye gerek kalmadan hiyerarşi genişlikten gelir.
+Saatler ve sayılar dar kesimde maç tabelası gibi okunur.
 
 ## Ekran düzeni
 
