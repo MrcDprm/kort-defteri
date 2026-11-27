@@ -27,7 +27,8 @@ export async function bildirimleriKur(db: SQLiteDatabase): Promise<void> {
   await Notifications.cancelAllScheduledNotificationsAsync();
   for (const b of plan) {
     await Notifications.scheduleNotificationAsync({
-      content: { title: b.baslik, body: b.govde, sound: 'default' },
+      // Raket vuruşu sesi uygulamaya gömülüdür; Expo Go'da çalmaz, yalnızca derlenmiş uygulamada duyulur.
+      content: { title: b.baslik, body: b.govde, sound: 'vurus.wav' },
       trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: b.zaman },
     });
   }

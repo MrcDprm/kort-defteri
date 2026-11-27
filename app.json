@@ -42,7 +42,8 @@
       [
         "expo-notifications",
         {
-          "color": "#2E5E8E"
+          "color": "#2E5E8E",
+          "sounds": ["./assets/sounds/vurus.wav"]
         }
       ],
       [
