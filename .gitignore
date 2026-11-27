@@ -1,0 +1,42 @@
+# Bağımlılıklar
+node_modules/
+
+# Expo ve React Native: ios/ ve android/ EAS derlemesinde üretilir
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+ios/
+android/
+.metro-health-check*
+
+# İmza ve anahtar dosyaları
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+
+# Ortam değişkenleri: depoda sadece örnek dosya durur
+.env
+.env.*
+!.env.example
+
+# Derleme ve test çıktıları
+build/
+coverage/
+*.tsbuildinfo
+
+# Günlükler
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Yerel araç çıktıları
+graphify-out/
