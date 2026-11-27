@@ -2,7 +2,7 @@
 
 # Kort Defteri
 
-An iPhone planner for tennis coaches: athletes, monthly and package payments, weekly lessons, attendance, performance tracking, tournaments and local reminders. All data stays on the phone, with automatic cloud backup.
+An iPhone planner for tennis coaches: athletes, payment tracking, weekly lessons, attendance, performance tracking, tournaments and local reminders. All data stays on the phone, with automatic cloud backup.
 
 ## Features
 
