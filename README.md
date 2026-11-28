@@ -19,7 +19,9 @@ An iPhone planner for tennis coaches: athletes, payment tracking, weekly lessons
 
 ## Screenshots
 
-Coming with the first version.
+| Today | Attendance | Progress | Payments |
+|---|---|---|---|
+| ![Today](docs/screenshots/bugun.jpg) | ![Attendance](docs/screenshots/yoklama.jpg) | ![Progress](docs/screenshots/gelisim.jpg) | ![Payments](docs/screenshots/odemeler.jpg) |
 
 ## Tech Stack
 

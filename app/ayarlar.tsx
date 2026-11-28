@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Alert, Linking, Text, View } from 'react-native';
 import { YedekHatasi } from '@/domain/yedek-semasi';
 import { degisti, useVeri } from '@/db/olay';
+import { ornekVeriYukle, tumVeriyiSil } from '@/db/ornek-veri';
 import { AYAR, ayar, ayarKaydet, bildirimAyarlari } from '@/db/veri';
 import { bildirimIzniIste, bildirimleriKur } from '@/bildirim';
 import { Alan, Bolum, Dugme, Ekran, Etiket, MetinDugme, SaatAlani, Satir, Secenekler, Yukleniyor } from '@/ui/bilesenler';
@@ -157,6 +158,32 @@ export default function Ayarlar() {
           </>
         )}
       </Bolum>
+
+      {__DEV__ ? (
+        <Bolum baslik="Geliştirici">
+          <Text style={{ fontFamily: yazi.normal, fontSize: 14, color: renk.soluk, lineHeight: 20 }}>Bu bölüm yalnızca geliştirme sürümünde görünür, hocanın telefonundaki uygulamada yoktur.</Text>
+          <Dugme
+            yazi="Örnek veri yükle"
+            tur="ikincil"
+            mesgul={mesgul === 'ornek'}
+            stil={{ marginTop: 12 }}
+            onPress={() => Alert.alert('Örnek veri yüklensin mi?', '14 sporcu, haftalık program, son üç haftanın yoklaması, ödemeler, değerlendirmeler ve turnuvalar eklenir. Mevcut kayıtlar silinmez.', [
+              { text: 'Vazgeç', style: 'cancel' },
+              { text: 'Yükle', onPress: () => void islem('ornek', async () => { await ornekVeriYukle(db); router.dismissAll(); }) },
+            ])}
+          />
+          <Dugme
+            yazi="Tüm veriyi sil"
+            tur="tehlike"
+            mesgul={mesgul === 'sil'}
+            stil={{ marginTop: 10 }}
+            onPress={() => Alert.alert('Tüm veri silinsin mi?', 'Sporcular, dersler, yoklamalar, ödemeler, değerlendirmeler, turnuvalar, profil ve fotoğraflar silinir. Metrikler ve bildirim ayarları kalır. Bu geri alınamaz.', [
+              { text: 'Vazgeç', style: 'cancel' },
+              { text: 'Sil', style: 'destructive', onPress: () => void islem('sil', async () => { await tumVeriyiSil(db); router.dismissAll(); }) },
+            ])}
+          />
+        </Bolum>
+      ) : null}
 
       <Text style={{ fontFamily: yazi.normal, fontSize: 13, color: renk.soluk, textAlign: 'center', marginTop: 36 }}>
         {`Kort Defteri ${surum}\n© ${new Date().getFullYear()} Miraç Deprem`}

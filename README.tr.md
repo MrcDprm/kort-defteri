@@ -19,7 +19,9 @@ Tenis antrenörleri için iPhone ajandası: sporcular, ödeme takibi, haftalık 
 
 ## Ekran Görüntüleri
 
-İlk sürümle eklenecek.
+| Bugün | Yoklama | Gelişim | Ödemeler |
+|---|---|---|---|
+| ![Bugün](docs/screenshots/bugun.jpg) | ![Yoklama](docs/screenshots/yoklama.jpg) | ![Gelişim](docs/screenshots/gelisim.jpg) | ![Ödemeler](docs/screenshots/odemeler.jpg) |
 
 ## Kullanılan Teknolojiler
 
