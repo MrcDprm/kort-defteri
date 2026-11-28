@@ -46,7 +46,7 @@ async function anlikGoruntu(db: SQLiteDatabase): Promise<Yedek> {
     const sutunlar = Object.keys(TABLOLAR[tablo]!).map((c) => `"${c}"`).join(', ');
     tablolar[tablo] = await db.getAllAsync<Satir>(`SELECT ${sutunlar} FROM ${tablo}`);
   }
-  return { uygulama: 'kort-defteri', surum: YEDEK_SURUMU, olusturuldu: new Date().toISOString(), tablolar };
+  return { uygulama: 'courtside', surum: YEDEK_SURUMU, olusturuldu: new Date().toISOString(), tablolar };
 }
 
 function hataMetni(e: { message: string } | null): string {

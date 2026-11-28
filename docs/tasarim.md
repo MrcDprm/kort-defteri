@@ -1,4 +1,4 @@
-# Kort Defteri: tasarım
+# Courtside: tasarım
 
 ## Kim, nerede, ne için
 

@@ -48,7 +48,7 @@ export default function Ayarlar() {
   const izinIste = async () => {
     const verildi = await bildirimIzniIste();
     if (!verildi) {
-      Alert.alert('Bildirimler kapalı', 'Ayarlar > Kort Defteri > Bildirimler bölümünden açabilirsin.', [
+      Alert.alert('Bildirimler kapalı', 'Ayarlar > Courtside > Bildirimler bölümünden açabilirsin.', [
         { text: 'Vazgeç', style: 'cancel' },
         { text: 'Ayarları aç', onPress: () => void Linking.openSettings() },
       ]);
@@ -186,7 +186,7 @@ export default function Ayarlar() {
       ) : null}
 
       <Text style={{ fontFamily: yazi.normal, fontSize: 13, color: renk.soluk, textAlign: 'center', marginTop: 36 }}>
-        {`Kort Defteri ${surum}\n© ${new Date().getFullYear()} Miraç Deprem`}
+        {`Courtside ${surum}\n© ${new Date().getFullYear()} Miraç Deprem`}
       </Text>
     </Ekran>
   );

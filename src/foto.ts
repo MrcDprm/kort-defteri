@@ -38,7 +38,7 @@ export function fotoSec(): Promise<string | null> {
       try {
         const izin = kamera ? await ImagePicker.requestCameraPermissionsAsync() : await ImagePicker.requestMediaLibraryPermissionsAsync();
         if (!izin.granted) {
-          Alert.alert('İzin gerekli', kamera ? 'Fotoğraf çekmek için Ayarlar > Kort Defteri bölümünden kameraya izin ver.' : 'Fotoğraf seçmek için Ayarlar > Kort Defteri bölümünden fotoğraflara izin ver.');
+          Alert.alert('İzin gerekli', kamera ? 'Fotoğraf çekmek için Ayarlar > Courtside bölümünden kameraya izin ver.' : 'Fotoğraf seçmek için Ayarlar > Courtside bölümünden fotoğraflara izin ver.');
           coz(null);
           return;
         }
