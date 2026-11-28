@@ -1,6 +1,6 @@
 **English** | [Türkçe](README.tr.md)
 
-# Kort Defteri
+# Courtside
 
 An iPhone planner for tennis coaches: athletes, payment tracking, weekly lessons, attendance, performance tracking, tournaments and local reminders. Built for a tennis coach's daily use on court. All data stays on the phone, with automatic cloud backup.
 

@@ -49,7 +49,7 @@ export default function KokYerlesim() {
 
   return (
     <Suspense fallback={<Yukleniyor />}>
-      <SQLiteProvider databaseName="kort-defteri.db" onInit={veritabaniniHazirla} useSuspense>
+      <SQLiteProvider databaseName="courtside.db" onInit={veritabaniniHazirla} useSuspense>
         <StatusBar style="dark" />
         <Arkaplan />
         <Stack

@@ -1,4 +1,4 @@
-# Kort Defteri: plan
+# Courtside: plan
 
 Bir tenis antrenörünün günlük işini tek uygulamada toplayan iPhone ajandası: sporcular, ödemeler, ders programı, yoklama, performans takibi, turnuvalar ve hocanın kendi profili. App Store'a çıkmaz; tek bir iPhone'a ad hoc derlemeyle kurulur ve hoca sahada her gün kullanır.
 
@@ -117,7 +117,7 @@ Tüm kimlikler UUID. Şema sürümlüdür, göçler sırayla uygulanır.
 ## Klasör yapısı
 
 ```
-mobile/04-kort-defteri/
+mobile/04-courtside/
 ├── app/                 expo-router ekranları
 ├── src/
 │   ├── domain/          saf TypeScript kurallar ve testleri

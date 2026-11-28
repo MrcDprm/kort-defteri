@@ -182,7 +182,7 @@ describe('bildirim planı', () => {
 
 describe('yedek doğrulama', () => {
   const gecerli = () => ({
-    uygulama: 'kort-defteri', surum: 1, olusturuldu: '2026-11-27T10:00:00.000Z',
+    uygulama: 'courtside', surum: 1, olusturuldu: '2026-11-27T10:00:00.000Z',
     tablolar: {
       athletes: [{ ...sporcu(1), photo: `${K(9)}.jpg` }],
       payments: [odeme(1)],

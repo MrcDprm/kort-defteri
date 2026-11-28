@@ -138,7 +138,7 @@ export const TABLO_SIRASI = Object.keys(TABLOLAR);
 export type Satir = Record<string, string | number | null>;
 
 export interface Yedek {
-  uygulama: 'kort-defteri';
+  uygulama: 'courtside';
   surum: number;
   olusturuldu: string;
   tablolar: Record<string, Satir[]>;
@@ -174,7 +174,7 @@ export class YedekHatasi extends Error {}
 export function yedegiDogrula(veri: unknown): Yedek {
   if (typeof veri !== 'object' || veri === null) throw new YedekHatasi('Yedek dosyası okunamadı.');
   const y = veri as Record<string, unknown>;
-  if (y.uygulama !== 'kort-defteri') throw new YedekHatasi('Bu dosya bir Kort Defteri yedeği değil.');
+  if (y.uygulama !== 'courtside') throw new YedekHatasi('Bu dosya bir Courtside yedeği değil.');
   if (typeof y.surum !== 'number' || y.surum > YEDEK_SURUMU) throw new YedekHatasi('Yedek, uygulamanın bu sürümünden yeni. Önce uygulamayı güncelle.');
   if (typeof y.olusturuldu !== 'string') throw new YedekHatasi('Yedeğin tarihi eksik.');
   if (typeof y.tablolar !== 'object' || y.tablolar === null) throw new YedekHatasi('Yedekte veri yok.');
@@ -198,7 +198,7 @@ export function yedegiDogrula(veri: unknown): Yedek {
       return temiz;
     });
   }
-  return { uygulama: 'kort-defteri', surum: y.surum, olusturuldu: y.olusturuldu, tablolar };
+  return { uygulama: 'courtside', surum: y.surum, olusturuldu: y.olusturuldu, tablolar };
 }
 
 /** Yedekte geçen fotoğraf dosya adları. */

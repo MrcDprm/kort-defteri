@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Kort Defteri",
-    "slug": "kort-defteri",
+    "name": "Courtside",
+    "slug": "courtside",
     "version": "1.0.0",
-    "scheme": "kortdefteri",
+    "scheme": "courtside",
     "platforms": ["ios"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,7 +13,7 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.miracdeprem.kortdefteri",
+      "bundleIdentifier": "com.miracdeprem.courtside",
       "config": {
         "usesNonExemptEncryption": false
       },

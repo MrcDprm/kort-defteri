@@ -1,6 +1,6 @@
 [English](README.md) | **Türkçe**
 
-# Kort Defteri
+# Courtside
 
 Tenis antrenörleri için iPhone ajandası: sporcular, ödeme takibi, haftalık dersler, yoklama, performans takibi, turnuvalar ve yerel hatırlatmalar. Bir tenis antrenörünün sahadaki günlük kullanımı için geliştirildi. Tüm veri telefonda durur, otomatik olarak buluta yedeklenir.
 

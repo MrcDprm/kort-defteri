@@ -1,4 +1,4 @@
--- Kort Defteri yedek kovası. Supabase panelinde SQL Editor'da bir kez çalıştırılır.
+-- Courtside yedek kovası. Supabase panelinde SQL Editor'da bir kez çalıştırılır.
 -- Kova özeldir; her kullanıcı yalnızca kendi kimliğiyle başlayan klasörü görür ve yazar.
 
 insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
